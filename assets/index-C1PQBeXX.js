@@ -4416,6 +4416,7 @@ No matching component was found for:
 
         /* ─── RESPONSIVE ───────────────────────────────────── */
         @media (max-width: 820px) {
+        .home-root { padding: 16px 14px 140px; }
           .card { grid-template-columns: 1fr; }
           .left-panel {
             flex-direction: row;
@@ -4437,7 +4438,7 @@ No matching component was found for:
         }
 
         @media (max-width: 560px) {
-          .home-root { padding: 16px 14px 80px; }
+          
           .card { border-radius: 14px; }
           .left-panel { flex-direction: column; align-items: center; text-align: center; }
          
