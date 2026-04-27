@@ -4087,32 +4087,55 @@ No matching component was found for:
                           ${50+Math.random()*100})`,y.fillText(D,0,0),y.restore(),w+=25+Math.random()*10}y.globalCompositeOperation="multiply";for(let R=0;R<50;R++)y.fillStyle=`rgba(0,0,0,${Math.random()*.15})`,y.fillRect(Math.random()*x,Math.random()*b,3,3);y.globalCompositeOperation="source-over";const C=y.getImageData(0,0,x,b),M=C.data;for(let R=0;R<M.length;R+=4){const D=Math.random()*20-10;M[R]+=D,M[R+1]+=D,M[R+2]+=D}y.putImageData(C,0,0)},p=v=>{v.preventDefault(),i===t.expected?(f(!0),r()):(alert("Incorrect key."),n(jb()))};return ee.useEffect(()=>{d()},[t]),G.jsxs("div",{style:{padding:"20px",border:"1px solid #ccc",borderRadius:"8px",maxWidth:"300px"},children:[G.jsx("h3",{children:"Security Check"}),G.jsx("p",{style:{fontSize:"12px",color:"#666"},children:"Enter the unique key for code:"}),G.jsx("canvas",{ref:e,width:200,height:50,style:{borderRadius:"4px",marginBottom:"10px"}}),G.jsxs("form",{onSubmit:p,children:[G.jsx("input",{type:"text",maxLength:6,value:i,onChange:v=>a(v.target.value),placeholder:"6-digit response",style:{width:"100%",padding:"8px",marginBottom:"10px",boxSizing:"border-box"}}),G.jsx("button",{type:"submit",disabled:c,style:{width:"100%",cursor:c?"not-allowed":"pointer"},children:c?"Verified":"Verify"})]}),!c&&G.jsx("button",{onClick:()=>n(jb()),style:{background:"none",border:"none",color:"blue",fontSize:"11px",marginTop:"10px",cursor:"pointer"},children:"Refresh Image"})]})}const ZE=["CDL Driver","Full-Stack Software Engineer","Flat-Bedder","React Developer","Christian","Father"];function R5(){const[r,e]=ee.useState(""),[t,n]=ee.useState(0),[i,a]=ee.useState(!1),c=ee.useRef(0),f=ee.useRef(null),[d,p]=ee.useState(()=>sessionStorage.getItem("captcha_verified")==="true"),[v,y]=ee.useState(!1),x=()=>{sessionStorage.setItem("captcha_verified","true"),p(!0)},[b,S]=ee.useState(!1);return ee.useEffect(()=>{const w=ZE[t%ZE.length],C=()=>{if(c.current++,i){if(e(w.slice(0,Math.max(0,w.length-c.current))),c.current>=w.length){a(!1),n(M=>M+1),c.current=0,f.current&&clearInterval(f.current),f.current=setInterval(C,80);return}}else if(e(w.slice(0,Math.min(c.current,w.length))),c.current>=w.length){f.current&&clearInterval(f.current),setTimeout(()=>{a(!0),c.current=0,f.current=setInterval(C,40)},900);return}};return f.current=setInterval(C,i?40:80),()=>{f.current&&(clearInterval(f.current),clearTimeout(f.current))}},[t,i]),G.jsxs("main",{className:"home-root",children:[G.jsx("style",{children:`
         @import url('https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@300;400;500;700;800&family=Fraunces:ital,wght@0,300;0,600;1,300;1,600&display=swap');
 
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
         :root {
-          --bg:        #07090f;
-          --surface:   #0d1017;
-          --surface2:  #111520;
-          --border:    rgba(255,255,255,0.06);
-          --border2:   rgba(255,255,255,0.03);
-          --accent:    #7ecbff;
-          --accent-dim:rgba(126,203,255,0.12);
-          --gold:      #f0c96a;
-          --muted:     #4e5a6e;
-          --muted2:    #8899ae;
-          --text:      #c2d2e6;
-          --heading:   #e8f1fc;
-          --sans:      'Cabinet Grotesk', system-ui, sans-serif;
-          --serif:     'Fraunces', Georgia, serif;
+          --bg:          #080c14;
+          --bg-card:     #0c111d;
+          --bg-glass:    rgba(255,255,255,0.022);
+          --border:      rgba(255,255,255,0.07);
+          --border-soft: rgba(255,255,255,0.04);
+          --accent:      #60a5fa;
+          --accent-dim:  rgba(96,165,250,0.1);
+          --accent-glow: rgba(96,165,250,0.18);
+          --gold:        #fbbf24;
+          --gold-dim:    rgba(251,191,36,0.08);
+          --teal:        #2dd4bf;
+          --teal-dim:    rgba(45,212,191,0.08);
+          --muted:       #3d4a5e;
+          --muted2:      #7a8fa8;
+          --text:        #b8ccdf;
+          --heading:     #e2edf8;
+          --mono:        'JetBrains Mono', monospace;
+          --sans:        'Syne', system-ui, sans-serif;
+          --serif:       'Literata', Georgia, serif;
+
+          /* skill pill colors */
+          --c-react:  rgba(97,218,251,0.1);
+          --c-react-t:#61dafb;
+          --c-ts:     rgba(49,120,198,0.14);
+          --c-ts-t:   #6baed9;
+          --c-node:   rgba(104,160,99,0.12);
+          --c-node-t: #76b947;
+          --c-mongo:  rgba(77,179,61,0.1);
+          --c-mongo-t:#57aa3c;
+          --c-blue:   rgba(96,165,250,0.1);
+          --c-blue-t: #60a5fa;
+          --c-purple: rgba(167,139,250,0.1);
+          --c-purple-t:#a78bfa;
+          --c-green:  rgba(52,211,153,0.1);
+          --c-green-t:#34d399;
+          --c-orange: rgba(251,146,60,0.1);
+          --c-orange-t:#fb923c;
         }
 
-        /* ─── ROOT ─────────────────────────────────────────── */
+        /* ─── ROOT ─────────────────────────────────── */
         .home-root {
           min-height: 100vh;
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 40px 24px 72px;
+          padding: 48px 24px 80px;
           background: var(--bg);
           color: var(--text);
           font-family: var(--sans);
@@ -4122,30 +4145,33 @@ No matching component was found for:
           overflow: hidden;
         }
 
-        /* ambient radial glows */
+        /* layered ambient glows */
         .home-root::before {
           content: '';
           position: fixed;
           inset: 0;
           background:
-            radial-gradient(ellipse 80% 60% at 20% -5%,  rgba(80,150,255,0.07) 0%, transparent 55%),
-            radial-gradient(ellipse 50% 50% at 85% 95%,  rgba(240,201,106,0.05) 0%, transparent 55%),
-            radial-gradient(ellipse 40% 40% at 50% 50%,  rgba(126,203,255,0.02) 0%, transparent 70%);
+            radial-gradient(ellipse 70% 50% at 15%  -10%, rgba(96,165,250,0.09)  0%, transparent 55%),
+            radial-gradient(ellipse 60% 50% at 90%  110%, rgba(251,191,36,0.06)  0%, transparent 50%),
+            radial-gradient(ellipse 45% 40% at 50%   50%, rgba(45,212,191,0.025) 0%, transparent 65%);
           pointer-events: none;
           z-index: 0;
         }
 
-        /* grain texture */
+        /* subtle grid lines */
         .home-root::after {
           content: '';
           position: fixed;
           inset: 0;
-          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
-          opacity: 0.022;
+          background-image:
+            linear-gradient(var(--border-soft) 1px, transparent 1px),
+            linear-gradient(90deg, var(--border-soft) 1px, transparent 1px);
+          background-size: 52px 52px;
+          mask-image: radial-gradient(ellipse 90% 90% at 50% 50%, black 30%, transparent 100%);
           pointer-events: none;
           z-index: 0;
         }
-
+          
         /* ─── CARD ─────────────────────────────────────────── */
         .card {
           position: relative;
