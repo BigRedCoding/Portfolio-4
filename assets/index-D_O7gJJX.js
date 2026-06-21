@@ -5036,6 +5036,12 @@ No matching component was found for:
         }
 
         .mobile-menu--open {
+            position: fixed;
+    top: 48px;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+    height: fit-content;
           max-height: 520px;
           opacity: 1;
           transform: translateY(0);
